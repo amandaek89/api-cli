@@ -31,9 +31,9 @@ const API_URL = 'http://your-authors-api-url.com';
 
 # API Testa Böcker och Författare
 
-## Testa Böcker (Books)
+### Testa Böcker (Books)
 
-1. **Hämta alla böcker**
+1. ## Hämta alla böcker
 
    node -e "require('./index').getBooks()"
    
@@ -59,12 +59,13 @@ const API_URL = 'http://your-authors-api-url.com';
 
     node -e "require('./index').deleteAllBooks()"
 
-##
-Testa Författare (Authors)
+
+### Testa Författare (Authors)
 
 1. ## Hämta alla författare
 
     node -e "require('./index').getAllAuthors()"
+
 2. ## Hämta en författare med ID
     
     node -e "require('./index').getOneAuthor(3)"
