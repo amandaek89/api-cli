@@ -87,7 +87,7 @@ async function deleteAllBooks() {
 // Get all authors
 async function getAllAuthors() {
     try {
-        const response = await axios.get('http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors');
+        const response = await axios.get(`http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors`);
         console.log('Authors:', response.data);
     } catch (error) {
         console.error('Error fetching authors:', error.message);
@@ -97,7 +97,7 @@ async function getAllAuthors() {
 // Get an author by ID
 async function getOneAuthor(id) {
     try {
-        const response = await axios.get('http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors/id/${id}');
+        const response = await axios.get(`http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors/${id}`);
         console.log(`Author with ID ${id}:`, response.data);
     } catch (error) {
         console.error(`Error fetching author with ID ${id}:`, error.message);
@@ -107,7 +107,7 @@ async function getOneAuthor(id) {
 // Get an author by name
 async function getAuthorByName(name) {
     try {
-        const response = await axios.get('http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors/name/${name}');
+        const response = await axios.get(`http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors/name/${name}`);
         console.log(`Author with name ${name}:`, response.data);
     } catch (error) {
         console.error(`Error fetching author with name ${name}:`, error.message);
@@ -117,7 +117,7 @@ async function getAuthorByName(name) {
 // Save a new author
 async function saveAuthor(authorData) {
     try {
-        const response = await axios.post('http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors/', authorData);
+        const response = await axios.post(`http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors`, authorData);
         console.log('Author created:', response.data);
     } catch (error) {
         console.error('Error saving author:', error.message);
@@ -127,7 +127,7 @@ async function saveAuthor(authorData) {
 // Update an existing author
 async function updateAuthor(id, authorData) {
     try {
-        const response = await axios.patch('http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors/id/${id}', authorData);
+        const response = await axios.patch(`http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors/${id}`, authorData);
         console.log(`Author with ID ${id} updated:`, response.data);
     } catch (error) {
         console.error(`Error updating author with ID ${id}:`, error.message);
@@ -137,7 +137,7 @@ async function updateAuthor(id, authorData) {
 // Delete an author by ID
 async function deleteAuthor(id) {
     try {
-        await axios.delete('http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors/${id}');
+        await axios.delete(`http://webbooks-env.eba-v82kmmpj.eu-north-1.elasticbeanstalk.com/authors/${id}`);
         console.log(`Author with ID ${id} deleted.`);
     } catch (error) {
         console.error(`Error deleting author with ID ${id}:`, error.message);

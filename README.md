@@ -72,7 +72,7 @@ const API_URL = 'http://your-authors-api-url.com';
 
 3. ## Hämta en författare med namn
 
-    node -e "require('./index').getAuthorByName('Författarens Namn')" 
+    node -e "require('./index').getAuthorByName('Jesper Nicoletti')" 
 
 4. ## Spara en ny författare
 
