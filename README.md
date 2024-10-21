@@ -21,10 +21,10 @@ It allows you to perform various operations on books, such as fetching, creating
     ```
 ### Authors API Testing Examples
 
-Below are examples of how to test the Authors API methods from the command line using Node.js.
+Below are examples of how to test the Library API methods from the command line using Node.js.
 
 #### Configuration
-Update the `API_URL` in `authors.js` with the base URL of your Authors API:
+Update the `API_URL` in `index.js` with the base URL of your Library API:
 
 ```javascript
 const API_URL = 'http://your-api-url.com';
