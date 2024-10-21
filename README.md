@@ -1,6 +1,7 @@
 # API CLI
 
-This project provides a command-line interface (CLI) for interacting with a book API hosted on AWS. It allows you to perform various operations on books, such as fetching, creating, updating, and deleting.
+This project provides a command-line interface (CLI) for interacting with a book API hosted on AWS. 
+It allows you to perform various operations on books, such as fetching, creating, updating, and deleting.
 
 ## Prerequisites
 
@@ -26,7 +27,7 @@ Below are examples of how to test the Authors API methods from the command line 
 Update the `API_URL` in `authors.js` with the base URL of your Authors API:
 
 ```javascript
-const API_URL = 'http://your-authors-api-url.com';
+const API_URL = 'http://your-api-url.com';
 ```
 
 # API Testa Böcker och Författare
@@ -39,7 +40,7 @@ const API_URL = 'http://your-authors-api-url.com';
    
 2. ## Hämta en bok med ID
 
-   node -e "require('./index').getOneBook(1)"
+   node -e "require('./index').getOneBook(9)"
 
 3. ## Hämta en bok med titel
 
@@ -48,9 +49,11 @@ const API_URL = 'http://your-authors-api-url.com';
 4. ## Spara en ny bok
 
     node -e "require('./index').saveBook({ title: 'Ny Bok', isbn: '1234567890', authorName: 'Författarens Namn' })"
+
 5. ## Uppdatera en befintlig bok
 
-    node -e "require('./index').patchBook(1, { title: 'Uppdaterad Bok', isbn: '0987654321', authorName: 'Uppdaterad Författare' })"
+    node -e "require('./index').patchBook(9, { title: 'Uppdaterad Bok', isbn: '0987654321', authorName: 'Uppdaterad Författare' })"
+
 6. ## Ta bort en bok med ID
 
     node -e "require('./index').deleteBook(1)" 
@@ -68,7 +71,7 @@ const API_URL = 'http://your-authors-api-url.com';
 
 2. ## Hämta en författare med ID
     
-    node -e "require('./index').getOneAuthor(3)"
+    node -e "require('./index').getOneAuthor(2)"
 
 3. ## Hämta en författare med namn
 
